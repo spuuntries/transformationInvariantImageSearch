@@ -76,7 +76,7 @@ def main():
     command, *filenames = sys.argv[1:]
     command = insert if command == 'insert' else lookup
 
-    r = redis.StrictRedis(host='localhost', port=6379, db=0)
+    r = redis.StrictRedis(host='192.168.100.204', port=6379, db=0)
     try:
         r.ping
     except redis.ConnectionError:
